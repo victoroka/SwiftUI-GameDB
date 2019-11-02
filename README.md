@@ -14,4 +14,10 @@ SwiftUI Game DB app that uses IGDB API to fetch game data
 - Get the API Key from https://www.igdb.com/api
 - Put API Key in GameStore.swift IGDB wrapper initializer
 - pod install
+- create a file called ```Constants.swift``` with the following code:
+```
+struct Constants {
+    static let apiKey = "INSERT YOUR API KEY HERE"
+}
+```
 - Follow the tutorial at: https://medium.com/@alfianlosari/building-swiftui-video-game-db-app-using-igdb-remote-api-alfian-losari-eb155a8ae3d0?sk=d218802a2428ef35f34ae3e2fef6478e
