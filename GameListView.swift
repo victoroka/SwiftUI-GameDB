@@ -20,6 +20,7 @@ struct GameListView: View {
                 } else {
                     List(gameList.games) { game in
                         Text(game.name)
+                            .navigationBarTitle("PS4")
                     }
                 }
             }
