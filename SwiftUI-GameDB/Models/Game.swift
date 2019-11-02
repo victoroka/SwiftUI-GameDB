@@ -6,6 +6,8 @@
 //  Copyright © 2019 Victor Hideo Oka. All rights reserved.
 //
 
+// The model that represent a video game title.
+
 import Foundation
 
 struct Game {

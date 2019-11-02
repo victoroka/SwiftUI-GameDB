@@ -6,6 +6,8 @@
 //  Copyright © 2019 Victor Hideo Oka. All rights reserved.
 //
 
+// The API that we will use to request latest games and game detail using IGDB wrapper.
+
 import Foundation
 import IGDB_SWIFT_API
 
@@ -16,7 +18,7 @@ class GameStore: GameService {
     private init() {}
     
     lazy var iGDB: IGDBWrapper = {
-        $0.userKey = "APIKEY"
+        $0.userKey = Constants.apiKey
         return $0
     }(IGDBWrapper())
     

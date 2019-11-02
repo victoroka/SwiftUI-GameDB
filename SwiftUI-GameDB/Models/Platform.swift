@@ -6,6 +6,8 @@
 //  Copyright © 2019 Victor Hideo Oka. All rights reserved.
 //
 
+// An enum that represent video game platform such as PS4, Xbox One, and Nintendo Switch.
+
 import Foundation
 
 enum Platform: Int, CustomStringConvertible, CaseIterable {
