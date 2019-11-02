@@ -16,7 +16,7 @@ struct GameListView: View {
         NavigationView {
             Group {
                 if gameList.isLoading {
-                    Text("Loading...")
+                    LoadingView()
                 } else {
                     List(gameList.games) { game in
                         Text(game.name)
