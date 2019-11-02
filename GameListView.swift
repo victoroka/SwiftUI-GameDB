@@ -9,11 +9,22 @@
 import SwiftUI
 
 struct GameListView: View {
+    
+    @ObservedObject var gameList: GameList = GameList()
+    
     var body: some View {
         NavigationView {
-            List {
-                Text("List")
+            Group {
+                if gameList.isLoading {
+                    Text("Loading...")
+                } else {
+                    List(gameList.games) { game in
+                        Text(game.name)
+                    }
+                }
             }
+        }.onAppear {
+            self.gameList.reload()
         }
     }
 }
