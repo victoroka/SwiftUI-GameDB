@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  SwiftUI-GameDB
 //
-//  Created by Alfian Losari on 05/08/19.
-//  Copyright © 2019 Alfian Losari. All rights reserved.
+//  Created by Victor Hideo Oka on 02/11/19.
+//  Copyright © 2019 Victor Hideo Oka. All rights reserved.
 //
 
 import UIKit
