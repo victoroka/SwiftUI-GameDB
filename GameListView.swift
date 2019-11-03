@@ -19,7 +19,9 @@ struct GameListView: View {
                     LoadingView()
                 } else {
                     List(self.gameList.games) { game in
-                        GameRowView(game: game)
+                        NavigationLink(destination: GameDetailView(gameId: game.id)) {
+                            GameRowView(game: game)
+                          }
                             .navigationBarTitle("PS4")
                     }
                 }
