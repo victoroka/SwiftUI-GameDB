@@ -18,8 +18,8 @@ struct GameListView: View {
                 if gameList.isLoading {
                     LoadingView()
                 } else {
-                    List(gameList.games) { game in
-                        Text(game.name)
+                    List(self.gameList.games) { game in
+                        GameRowView(game: game)
                             .navigationBarTitle("PS4")
                     }
                 }
