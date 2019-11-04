@@ -11,6 +11,7 @@ import SwiftUI
 struct GameListView: View {
     
     @ObservedObject var gameList: GameList = GameList()
+    var platform: Platform = .ps4
     
     var body: some View {
         NavigationView {
@@ -21,13 +22,16 @@ struct GameListView: View {
                     List(self.gameList.games) { game in
                         NavigationLink(destination: GameDetailView(gameId: game.id)) {
                             GameRowView(game: game)
-                          }
-                            .navigationBarTitle("PS4")
+                        }
                     }
                 }
             }
-        }.onAppear {
-            self.gameList.reload()
+            .navigationBarTitle(self.platform.description)
+        }
+        .onAppear {
+            if self.gameList.games.isEmpty {
+                self.gameList.reload(platform: self.platform)
+            }
         }
     }
 }
